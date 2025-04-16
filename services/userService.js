@@ -14,7 +14,7 @@ exports.getAllUsers = async (req, res) => {
 exports.GetUser = async (req, res) => {
     try {
         const usuarioId = req.query.user 
-        let { data } = await cliente.supabase.from('usuario').select('*').eq('id',usuarioId);
+        let { data, error  } = await cliente.supabase.from('usuario').select('*').eq('id',usuarioId);
         res.send(data);
     } catch(error) {
         res.send(400)
