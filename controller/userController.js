@@ -5,4 +5,7 @@ exports.funcHello = async (req, res) => {
 };
 
 exports.funcGetUsers = userServ.getAllUsers;
+exports.funcGetUser = userServ.GetUser;
+exports.funcDeleteUser = userServ.DeleteUser;
+exports.funcCreateUser = userServ.CreateUser;
 
